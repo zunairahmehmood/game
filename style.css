@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Bitcount+Grid+Double:wght@100..900&family=Black+Ops+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Winky Rough", sans-serif;
+  /* background: black; */
+}
+
+/* game intro */
+#start-img {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(main-imgs/nina-img-01.gif);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#start-button {
+  padding: 15px 50px;
+  font-size: 25px;
+  background-color: #2a3d72;
+  color: rgb(27, 22, 22);
+  border: none;
+  cursor: pointer;
+  border: 3px solid rgb(27, 22, 22);
+  border-radius: 10px;
+  animation: pulse 1.5s infinite;
+  transition: 0.3s ease;
+}
+
+#start-button:hover {
+  background-color: #4d629c;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+/* game intro end */
+
+
+/* game container */
+#container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(main-imgs/container.gif);
+  background-position: center;
+  background-size: cover;
+  display: none;
+  position: relative;
+}
+
+.char1-act1 > img {
+  height: 250px;
+  width: 250px;
+}
+
+#charOneStand {
+  position: absolute;
+  top: 310px;
+  left: 100px;
+  height: 150px;
+  width: 150px;
+}
+
+
+.char1-act2 > img {
+  height: 250px;
+  width: 250px;
+}
+
+#charOneForward {
+  display: none;
+  position: absolute;
+  top: 310px;
+}
+
+.char1-act3 > img {
+  height: 250px;
+  width: 250px;
+}
+
+#charOneBackward {
+  display: none;
+  position: absolute;
+  top: 310px;
+}
+
+.char1-act4 > img {
+  height: 250px;
+  width: 250px;
+}
+
+#charOneAction {
+  display: none;
+  position: absolute;
+  top: 310px;
+}
+
+@keyframes jump {
+  0% { top: 300px; }
+  50% { top: 200px; } /* jump height */
+  100% { top: 300px; }
+}
+
+.jump-animate {
+  animation: jump 0.5s ease-out;
+}
+
+.char2-act1 > img {
+  height: 250px;
+  width: 250px;
+}
+
+#charTwoStand {
+  /* display: none; */
+  position: absolute;
+  top: 310px;
+  right: 0px;
+}
+
+.boom {
+  height: 250px;
+  width: 250px;
+  z-index: 999;
+  position: absolute;
+  top: 310px;
+  right: 0px;
+}
+
+/* winning */
+#winScreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  text-align: center;
+  color: #616096;
+  font-size: 3.5rem;
+  padding-top: 150px;
+}
+
+#charOneBig {
+  width: 100px;
+  transition: transform 1.5s ease;
+}
+
+#winScreen.show #charOneBig {
+  transform: scale(3);
+}
+
+.win {
+  padding-top: 50px;
+}
+
+#playAgainBtn {
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  background-color: #616096;
+  color: #000000;
+  border: 3px solid rgb(39, 4, 19);
+  border-radius: 10px;
+  animation: pulse 1.5s infinite;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#playAgainBtn:hover {
+  background-color: #807fb3;
+}

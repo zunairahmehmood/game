@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="main-imgs/icon.png">
+</head>
+<body>
+
+    <!-- game intro -->
+    <div id="start-img">
+        <button id="start-button">START</button>
+    </div>
+    <!-- game intro end -->
+
+    
+    <!-- game container -->
+    <div id="container">
+
+        <!-- character 01 -->
+        <div class="char1-act1 jump-animate" id="charOneStand">
+            <img src="character-01/es-stand.gif" alt="">
+        </div>
+
+        <div class="char1-act2" id="charOneForward">
+            <img src="character-01/es-forward.gif" alt="">
+        </div>
+
+        <div class="char1-act3" id="charOneBackward">
+            <img src="character-01/es-backward.gif" alt="">
+        </div>
+
+        <div class="char1-act4" id="charOneAction">
+            <img src="character-01/es-action.gif" alt="">
+        </div>
+
+
+        <!-- character 02 -->
+        <div class="char2-act1" id="charTwoStand">
+            <img src="character-02/guy.gif" alt="">
+        </div>
+
+        <img id="boomEffect" src="main-imgs/boom.gif" class="boom"/>
+
+
+        <!-- winning -->
+        <div id="winScreen">
+            <img id="charOneBig" src="character-01/es-winnig.png" alt="charOne" />
+            <h1 class="win">You Win!</h1>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
